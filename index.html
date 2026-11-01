@@ -33,6 +33,32 @@
     footer{max-width:1120px;margin:-22px auto 0;padding:0 16px 30px;color:var(--muted);font-size:12px} .footer-links a{color:var(--navy)}
     @media(max-width:800px){main{grid-template-columns:1fr}.paper-list{max-height:430px}.controls{grid-template-columns:1fr}.panel-head{padding:16px}.panel-body{padding:16px}}
     @media print{header{padding:18px;background:#fff;color:#111;border-bottom:2px solid #111}header p,.brand{color:#333}main{display:block;margin:0;padding:0}.panel:first-child,.actions,.notice,.footnote,footer{display:none!important}.panel{box-shadow:none;border:0}.panel-head{padding:10px 0}.panel-body{padding:8px 0}.selected-item{break-inside:avoid}.remove{display:none}}
+ /* Small inline loading ring */
+.btn-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.35);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: btn-spin 0.7s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes btn-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-spinner[hidden] {
+    display: none;
+}
+
+.btn-primary:disabled {
+    opacity: 0.8;
+    cursor: wait;
+}
   </style>
 </head>
 <body>
